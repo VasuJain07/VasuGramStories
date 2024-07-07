@@ -15,6 +15,7 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.example.vasugram.ui.theme.UserStoryChangeInteraction
 
@@ -35,6 +36,7 @@ class UserStoryView @JvmOverloads constructor(
     private val handler = Handler(Looper.getMainLooper())
     private var autoScrollRunnable : Runnable? = null
     private var autoScrollDelay: Long = 5000 // 5 seconds
+    private val circularProgressDrawable : CircularProgressDrawable
 
     init {
         LayoutInflater.from(context).inflate(R.layout.story_item, this, true)
@@ -42,6 +44,11 @@ class UserStoryView @JvmOverloads constructor(
         progressBar = findViewById(R.id.progressBar)
         progressBar.visibility = View.GONE
         userId = findViewById(R.id.userIdTextView)
+
+        circularProgressDrawable = CircularProgressDrawable(getContext())
+        circularProgressDrawable.strokeWidth = 5f
+        circularProgressDrawable.centerRadius = 30f
+        circularProgressDrawable.start()
 
         gestureDetector = GestureDetector(context, object : GestureDetector.SimpleOnGestureListener() {
             @RequiresApi(Build.VERSION_CODES.Q)
@@ -83,7 +90,7 @@ class UserStoryView @JvmOverloads constructor(
     private fun showImage(index: Int) {
         if (index in imageUrls.indices) {
 //            autoScrollRunnable?.let { handler.removeCallbacks(it) }
-            Glide.with(context).load(imageUrls[index]).into(imageView)
+            Glide.with(context).load(imageUrls[index]).placeholder(circularProgressDrawable).into(imageView)
 //            autoScrollRunnable = Runnable { showNextImage() }
 //            autoScrollRunnable?.let{handler.postDelayed(it,autoScrollDelay)}
         }

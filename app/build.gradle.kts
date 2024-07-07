@@ -52,7 +52,7 @@ android {
 }
 
 dependencies {
-
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
     implementation(libs.androidx.core.ktx)
     implementation("com.jakewharton.timber:timber:5.0.1")
     implementation("com.github.bumptech.glide:glide:4.12.0")
