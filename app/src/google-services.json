@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "110555561473",
+    "project_id": "vasugram-982b2",
+    "storage_bucket": "vasugram-982b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110555561473:android:a1f9a933993a0abf11ca00",
+        "android_client_info": {
+          "package_name": "com.example.vasugram"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmxwgQPIHTPt6ix4ZBDKgyif3l9YlM-Oo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
