@@ -5,7 +5,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
-import com.example.vasugram.DataModels.Story
+import com.example.vasugram.DataSource.DataModels.Story
+import com.example.vasugram.adapters.UserStoryAdapter
 import com.example.vasugram.ui.theme.UserStoryChangeInteraction
 import timber.log.Timber
 

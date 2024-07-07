@@ -1,4 +1,4 @@
-package com.example.vasugram
+package com.example.vasugram.adapters
 
 import android.os.Build
 import android.view.LayoutInflater
@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vasugram.DataModels.Story
+import com.example.vasugram.DataSource.DataModels.Story
+import com.example.vasugram.R
+import com.example.vasugram.UserStoryView
 import com.example.vasugram.ui.theme.UserStoryChangeInteraction
 
 class UserStoryAdapter(private val stories: List<Story>, private val parentStoryActivity: UserStoryChangeInteraction) : RecyclerView.Adapter<UserStoryAdapter.UserStoryViewHolder>() {

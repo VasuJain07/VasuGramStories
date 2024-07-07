@@ -3,9 +3,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.vasugram.DataModels.Story
-import com.google.firebase.Firebase
-import com.google.firebase.firestore.firestore
+import com.example.vasugram.DataSource.DataModels.Story
+import com.example.vasugram.DataSource.StoryRepository
 import kotlinx.coroutines.launch
 import timber.log.Timber
 import timber.log.Timber.Forest.plant

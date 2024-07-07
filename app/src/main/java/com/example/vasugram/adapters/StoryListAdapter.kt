@@ -1,4 +1,4 @@
-package com.example.vasugram
+package com.example.vasugram.adapters
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -9,10 +9,13 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.vasugram.DataModels.Story
+import com.example.vasugram.DataSource.DataModels.Story
+import com.example.vasugram.R
 import de.hdodenhof.circleimageview.CircleImageView
 
-class StoryListAdapter(private val onClick: (Story) -> Unit) : ListAdapter<Story, StoryListAdapter.StoryViewHolder>(DiffCallback) {
+class StoryListAdapter(private val onClick: (Story) -> Unit) : ListAdapter<Story, StoryListAdapter.StoryViewHolder>(
+    DiffCallback
+) {
 
     companion object DiffCallback : DiffUtil.ItemCallback<Story>() {
         override fun areItemsTheSame(oldItem: Story, newItem: Story): Boolean {

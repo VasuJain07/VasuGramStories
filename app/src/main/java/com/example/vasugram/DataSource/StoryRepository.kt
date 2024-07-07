@@ -1,6 +1,6 @@
-package com.example.vasugram
+package com.example.vasugram.DataSource
 
-import com.example.vasugram.DataModels.Story
+import com.example.vasugram.DataSource.DataModels.Story
 import com.google.firebase.firestore.FirebaseFirestore
 import timber.log.Timber
 
